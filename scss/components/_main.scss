@@ -1,0 +1,170 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html{
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+h1 {
+    text-align: center; 
+	padding-top: 2em;
+	font-size: 36px;
+}
+
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: $background;
+  font-family: $shadows;
+  font-size: 15px;
+  color: $dark-grey;
+}
+
+
+input[type="text"],
+input[type="password"]{
+  background: $light-grey;
+  color: $dark-grey;
+  letter-spacing: 1.5px;
+  font-family: $shadows;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 300;
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  width: 10px;
+  height: 9px;
+  position: relative;
+  outline: medium none;
+  margin-right: 10px;
+  &:before{
+  	width: 15px;
+  	height: 15px;
+  	content: "";
+  	display: block;
+  	border: 3px solid $dark-grey;
+  	border-radius: 9px;
+  	position: absolute;
+  }
+}
+
+input[type="checkbox"]:checked::after{
+  width: 5px;
+  height: 5px;
+  content: "";
+  display: block;
+  background: $pink;
+  border-radius: 5px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+input[type="submit"]{
+  display: block;
+  padding: 10px;
+  background: $pink;
+  border: 0;
+  border-radius: 3px;
+  font-family: $shadows;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 100%;
+  color: $light-pink;
+  cursor: pointer;
+  @include ease(all, 300ms, ease-in-out);
+  
+  &:hover {
+  	background: $pink-hov;
+  }
+}
+
+.logo{
+  background: $pink;
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 30px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  position: relative;
+  @include transform;
+  @include hide-text;
+  &:before{
+  	width: 35px;
+  	height: 35px;
+  	display: block;
+  	border: 6px solid $light-pink;
+  	content: "";
+  	position: absolute;
+  	border-radius: 20px;
+  	top: 13px;
+  	left: 13px;
+  }
+  &:hover{
+  	background: $pink-hov;
+  }
+}
+
+.main-form{
+  width: 450px;
+  margin: 50px auto;
+  padding-top: 40px;;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+  @include shadow;
+  background: $light-pink;
+  label{
+	display: block;
+	letter-spacing: 1px;
+  	font-weight: 400;
+  	font-size: 15px;
+  	margin: 8px 0 15px;
+  	line-height: 15px;
+  	cursor: pointer;
+  } 
+  div{
+  	margin-top: 20px;
+  }
+}
+
+a{
+  color: $dark-grey;
+  letter-spacing: .5px;
+  text-decoration: underline;
+  &:hover{
+  	color: $background;
+  }
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+li{
+  padding-bottom: 10px;
+  text-align: center;
+}

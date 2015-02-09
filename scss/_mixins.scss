@@ -1,0 +1,45 @@
+// Mixins
+
+@mixin zero{
+  margin: 0;
+  padding: 0;
+}
+
+@mixin ease($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin transform{
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+@mixin shadow{
+  -webkit-box-shadow: 0 1px 2px $shadow;
+  -moz-box-shadow: 0 1px 2px $shadow;
+  -ms-box-shadow: 0 1px 2px $shadow;
+  -o-box-shadow: 0 1px 2px $shadow;
+  box-shadow: 0 1px 2px $shadow;
+
+}
+
+// Hide text in an element
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
+@mixin show-text{
+  text-indent: 0;
+  white-space: normal;
+  overflow: visible;
+}
